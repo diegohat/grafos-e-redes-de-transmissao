@@ -1,294 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
-        
-        <link rel="canonical" href="https://gvs.com/">
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Atividade</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
-
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
-
-    <body class="homepage">
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href=".">Atividade</a>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
-
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Grafos e Redes de Trasmissão</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#grafos-pontes" class="nav-link">grafos-pontes</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#introducao" class="nav-link">Introdução</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#grafos" class="nav-link">Grafos</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#redes-de-distribuicao-de-energia" class="nav-link">Redes de Distribuição de Energia</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#confiabilidade" class="nav-link">Confiabilidade</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#calculo-centralidades" class="nav-link">Calculo Centralidades</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#metodologia" class="nav-link">Metodologia</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Problema";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
 
-<h1 id="grafos-pontes">grafos-pontes</h1>
-<p>Busca por pontes em grafos</p>
-<p>Passo a passo</p>
-<ul>
-<li>introdução sobre as redes de distribuição de energia</li>
-<li>perturbações em linhas de transmissão da rede básica (MURILAO)</li>
-<li>metodo de adicao de arestas (PAIVA)</li>
-<li>introdução sobre os grafos e suas aplicações</li>
-</ul>
-<hr />
-<ul>
-<li>gerar um grafo a partir de um arquivo csv ou txt <strong>[OK!]</strong></li>
-<li>analisar o grafo - centralidades (grau, proximidade e intermediação)</li>
-<li>plotar cada um dos grafos coloridos</li>
-<li>plotar histograma</li>
-<li>analisar histograma</li>
-</ul>
-<h2 id="introducao">Introdução</h2>
-<p>Esse trabalho tem como objetivo aplicar as estruturas grafos para solucionar um problema real qualquer, o problema escolhido foi de analise de estabilidade em linhas de transmissao de energia eletrica, com o cálculo de centralidades para mesurar a importancia que o barramento tem no sistema e garantir a boa serventia perante falhas no sistema.</p>
-<p>Com o intuito de realizar testes no sistema, permitindo que a seja possivel aplicar em qualquer rede de tramissao de energia elétrica, garantindo maior confiabilidade e diminuição de risco de interrupção no fornecimento de enérgia eletrica.
- ##</p>
-<h2 id="grafos">Grafos</h2>
-<p>Um grafo é uma representação abstrata de um conjunto de objetos e das relaçoes existentes entre eles.
- É definido por um conjunto de nós ou vérticies e pelas ligações ou arestas, que ligam pares de nós. Uma grande variedade de estruturas do mundo real podem ser representadas abstratamente através de grafos. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204011472-abc9d182-bd8f-4513-93a0-73a8b24b9302.png" /></p>
-<h3 id="conceitos-de-grafos">Conceitos de grafos</h3>
-<p>Um grafo é descrito por um par (V,E), onde V é o conjunto de vértices e E o conjunto das arestas que ligam pares de vértices. Um grafo pode ser dirigido ou direcionado, se as arestas tiverem uma direção, ou não dirigido, se as arestas não tiverem direção. A figura seguinte ilustra um grafo dirigido. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204011724-35d17008-0239-4c94-9fb0-b693b47b574b.png" /></p>
-<p>Se as arestas tiverem associado um peso ou custo, o grafo passa a chamar-se de grafo pesado. A figura seguinte ilustra um grafo pesado não dirigido. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204011774-377a1639-42a8-4159-a1ca-e05e0c0d3579.png" /></p>
-<p>Os nós podem ser de diferente tipos, representados por cores ou etiquetas. Nesse caso, o grafo diz-se colorido. A figura seguinte ilustra um grafo colorido não dirigido. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204011944-e17f9f97-42c6-4777-b68e-6ecfc275bbff.png" /></p>
-<p>Quando apenas é admitida no máximo uma aresta entre dois nós, diz-se que o grafo é simples.</p>
-<h3 id="grafos-e-a-ciencia-de-computadores">Grafos e a Ciência de Computadores</h3>
-<p>Com a enorme utilidade dos grafos, existe toda uma área de Ciência de Computadores dedicada ao seu estudo e são inúmeros e muito importantes os algoritmos que manipulam grafos. Um exemplo é o Algoritmo de Dijkstra, que encontra o caminho mais curto entre um nó e todos os outros nós, num grafo pesado. Existem muitos outros algoritmos para outras tarefas tais como maximizar o fluxo entre nós ou encontrar a árvore mínima de suporte. </p>
-<p>Do ponto de vista da Programação, um grafo é uma estrutura de dados e existem duas maneiras base de o implementar na prática:</p>
-<ul>
-<li><b>Matriz de Adjacências:</b> uma matriz de V por V células, onde a célula na linha i e coluna j nos dá informação sobre a ligação entre os nós i e j. Por exemplo, se o grafo não for pesado, a célula podia conter o valor verdadeiro (ou um) quando existisse uma ligação entre i e j e o valor falso (ou zero) quando tal não acontecesse. Se o grafo for pesado, cada célula pode conter um número representando o peso da aresta. A figura seguinte ilustra um grafo não dirigido e a sua correspondente matriz de adjacências. </li>
-</ul>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204012590-29255987-c010-438f-9995-96b122603d70.png" /></p>
-<ul>
-<li><b>Lista de Adjacências:</b> um vetor de listas onde a posição i do vetor contém uma lista dos nós aos quais o nó i se encontra ligado. Se o grafo for pesado, cada elemento da lista contém também o peso da ligação. A figura seguinte ilustra um grafo não dirigido e a sua correspondente lista de adjacências.</li>
-</ul>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204012842-41f77227-b335-4c33-b5c3-53ceddc77a9e.png" /></p>
-<p>A matriz permite verificar em tempo constante se uma dada ligação existe ou não. Por oposição, no caso da lista, tal não acontece e é necessário percorrer a lista para saber se um dado nó está ou não ligado. Em contrapartida, se for necessário percorrer todos os nós ligados a um dado nó, a lista é mais eficiente, pois permite percorrer apenas os nós ligados, e não andar a percorrer toda uma linha da matriz, verificando se a ligação existe ou não. </p>
-<h2 id="redes-de-distribuicao-de-energia">Redes de Distribuição de Energia</h2>
-<p>O sistemas elétricos de potência têm a função essencial de fonercer energia elétrica aos usuários, com qualidade e no instante em que for solicitada e esses sistemas podem ser divididos em três grandes blocos:</p>
-<ul>
-<li>
-<p><b>Geração:</b> que perfaz a função de converter alfuma forma de energia em energia elétrica.</p>
-</li>
-<li>
-<p><b>Transmissão:</b>  que é responsavel pelo transporte de energia elétrica dos centros de produção aos de consumo.</p>
-</li>
-<li>
-<p><b> Distribuição: </b> que distribui energia elétrica recebida do sistema de transmissão aos grandes, médios e pequenos consumidores.</p>
-</li>
-</ul>
-<p>E um elemento chave desses sistemas, uma parte comum deles, os transformadores são maquinas elétricas estáticas que têm finalidade de aumentar ou abaixar a tensão e a corrente eletricas por indução eletromagnética. Os trnasformadores desempenham papel preponderante nos sistemas de distribuição, para compatibilizar os níveis de tensão fornecidos pela concessionária de energia local, os quais são elevados e perigosos, para aqueles apropriados à utilização com segurança em empreendimentos industriais, comerciais e residenciais.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204018590-f8823bfa-a646-4982-bfdf-48d3a61ba8f5.png" /></p>
-<h2 id="confiabilidade">Confiabilidade</h2>
-<p>O cenario atual no Brasil, com a presença de um órgão governamental regulador do setor, exige cada vez mais qualidade das empressas concessionária que distribuem energia elétrica e com orçamentos limitados das empresas, no atual momento econômico, fica essencial o desenvolvimento de métodos de análise otimizada para que indique pontos priotarios de investimento no sistema elétrico.</p>
-<p>Uma eventual falha em alguma linha de transmissão que, dependendo do grau de contribuição para o sistema, pode provocar um blecaute, deixando milhares de consumidores sem energia elétrica. Como em Amapá em 2020 que uma interrupção no fornecimento deixou cerca de 800 mil pessoas sem energia elétrica por volta de 20 dias e em 2018, uma falha na linha de transmissão ligada à usina de Belo Monte afetou 70 milhões de pessoas com um blecaute.
-Propondo-se evitar tais casos, o estudo de fragilidades em linhas de transmissão se destaca ja que o impacto causado por uma eventual falha dessa pode resultar em perdas ecônomicas e desconforto para todos consumidores.</p>
-<p>O transporte de energia das usinas geradoras até a unidade de consumo no brasil ja se depara com o desafio territorial, sendo um territorio muito extenso e possui diversos topologias de terrenos. E as linhas de transmissão estao expostas a diversos fatores que podem provocar falhas nos sistemas, como queimadas, falha em equipamento, ventos fortes, descargas atmosféricas e falha humana podendo interroper o fluxo de energia. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204029425-2b727213-471f-46c4-9e4d-23051dbb4d16.png" /></p>
-<h2 id="calculo-centralidades">Calculo Centralidades</h2>
-<p>O calculo de centralidade no campo da teoria dos grafos e da análise de redes, <b> centralidade</b> é uma medida de importancia de um verice em um grafo.
-Existem diferentes tipos de medidas de centralidade de um vértice num grafo que determinam a importância relativa, que permitem, por exemplo, estimar o quanto uma pessoa é influente dentro de uma rede social, o quão é importante uma sala dentro de um edifício e como é bem utilizada uma estrada dentro de uma rede urbana. Vários conceitos de centralidade foram primeiramente desenvolvidos na análise de redes sociais, e muitos dos termos usados para medir a centralidade refletem a sua origem sociológica</p>
-<h3 id="centralidade-de-grau">Centralidade de Grau</h3>
-<p>Centralidade de grau é definida como o número de ligações incidentes de um vértice. O grau pode ser interpretado como a probabilidade que o vértice tem de receber alguma informação da rede. No caso de uma rede orientada (onde os laços tem direção), define-se duas medidas distintas de centralidade de grau: indegree e outdegree. Indegree é uma contagem do número de ligações direcionadas para o nó e outdegree é o número de ligações que o nó encaminha para outros. 
-A centralidade de grau de um vértice v , para um dado grafo G := ( V , E )  com | V | vértices e | E |  arestas, é definido como: </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204041960-912a8ded-e9e9-49a2-8649-2454f5020e6f.png" /></p>
-<p>Calculando a centralidade de grau para todos os nós num grafo <img alt="image" src="https://user-images.githubusercontent.com/54191675/204042081-fd70178f-7ecd-4fcd-9eec-ae926db84ae8.png" />em representação da densa matriz de adjacência do grafo, e para as arestas tem <img alt="image" src="https://user-images.githubusercontent.com/54191675/204042119-c413feb0-0c53-4064-9b57-24c34156e1bb.png" /> numa representação de uma matriz dispersa. </p>
-<p>Por vezes, o interesse está em descobrir a centralidade de um grafo dentro de um grafo. A definição da centralidade no nível do nó pode ser estendida para o grafo inteiro. Deixemos v* ser o nó com maior centralidade de grau em G.Deixemos X := ( Y , Z ) seja o Y nó conectado ao grafo que maximiza a seguinte quantidade (Com y∗ sendo o nó com maior grau de centralidade X): </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204042274-67b3a000-ebbb-4a85-93c5-2d67c4de11b7.png" /></p>
-<p>Analogamente, o grau de centralidade do grafo G é: </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204042292-183a8558-df4f-4fa8-9ecf-679d9514700d.png" /></p>
-<p>O valor de H é maximizado quando o grafo X contém um nó central ao qual todos os outros nós são ligados (um grafo em estrela), e neste caso  H = ( n − 1 ) ( n − 2 ).</p>
-<p>Exemplo de de diferentes centralidades de grau, sendo os vertices de cor mais quente(vermelho) os vertices que possuiem maior grau e vertices de cor mais fria os que possuem menor grau.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204042992-f824b310-cd5d-4129-ab7f-f90ce9a8b0b6.png" /></p>
-<h3 id="centralidade-de-proximidade">Centralidade de Proximidade</h3>
-<p>Em grafos conectados existe uma distância natural métrica entre todos os pares de nós, definido pelo comprimento de seus caminhos mais curtos. O afastamento de um nó s é definido como a soma de suas distâncias para todos os outros nós, e sua proximidade é definida como o inverso do afastamento.</p>
-<p>Na definição clássica de centralidade de proximidade, a disseminação de informações é modelada através da utilização dos caminhos mais curtos. Este modelo pode não ser o mais realista de todos os tipos de cenários de comunicação. Assim, as definições relacionadas foram discutidas para medir proximidade, como a centralidade de proximidade de caminhos aleatórios introduzida por Noh e Rieger (2004). Mede a velocidade com que as mensagens aleatórias chegam a um vértice de fora da rede, digamos que é uma espécie de versão aleatória das mensagens da centralidade de proximidade</p>
-<p>Exemplo de de diferentes centralidades de Proximidade, sendo os vertices de cor mais quente(vermelho) os vertices que possuiem maior grau e vertices de cor mais fria os que possuem menor grau.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204043385-41987a7d-0c11-47e2-938b-d0f9efd263f1.png" /></p>
-<h3 id="centralidade-de-intermediacao">Centralidade de Intermediação</h3>
-<p>Centralidade de intermediação quantifica o número de vezes que um nó age como ponte ao longo do caminho mais curto entre dois outros nós. Foi introduzido por Linton Freeman como uma medida para quantificar o controlo de um ser humano sobre a comunicação entre outros seres humanos numa rede social. 
-A intermediação de um vértice v num grafo G := ( V , E ) com V vértices é calculado como se segue:</p>
-<ul>
-<li>
-<ol>
-<li>Para cada par de vértices (s,t), calcular os caminhos mais curtos entre eles. </li>
-</ol>
-</li>
-<li>
-<ol>
-<li>Para cada par de vértices (s,t), determinar a fração de caminhos mais curtos que passam através do vértice em questão (neste caso, vértice v ). </li>
-</ol>
-</li>
-<li>
-<ol>
-<li>Somar esta fração de todos os pares de vértices (s,t). </li>
-</ol>
-</li>
-</ul>
-<p>De forma mais compacta a intermediação pode ser representada como:</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204044286-288bc9d6-b7b5-4950-b19a-a8193c75bb7e.png" /></p>
-<p>Onde, <img alt="image" src="https://user-images.githubusercontent.com/54191675/204044728-3245dd01-2d5e-47b8-be85-ef729d1b9f6f.png" />
- é o número total de caminhos curtos desde o nó s ao nó t  e <img alt="image" src="https://user-images.githubusercontent.com/54191675/204044810-95737296-94cc-4ea1-8efe-f8719594b2f7.png" />
- é o número desses caminhos que passam por v. A intermediação pode ser normalizada ao ser dividida pelo número de pares de vértices não incluindo v, que para grafos diretos é ( n − 1 ) ( n − 2 )  e para grafos indiretos é ( n − 1 ) ( n − 2 ) / 2 . or exemplo, um grafo indireto em estrela, o vértice central (que está contido em cada caminho mais curto possível) teria uma intermediação de ( n − 1 ) ( n − 2 ) / 2  (1, se normalizado) enquanto as folhas (as quais não estão presentes em nenhum caminhos mais curtos) teria uma intermediação de 0. </p>
-<p>Do ponto de vista de cálculo, tanto a centralidade de intermediação como a de proximidade de todos os vértices de um grafo envolvem o cálculo dos caminhos mais curtos entre todos os pares de vértices de um grafo, que requer um tempo <img alt="image" src="https://user-images.githubusercontent.com/54191675/204044962-737d4ca4-188d-4942-b23b-fb01b8144382.png" /> com o algoritmo de Floyd-Warshall.No entanto, em grafos dispersos, o algoritmo de Johnson pode ser mais eficiente, tendo tempo <img alt="image" src="https://user-images.githubusercontent.com/54191675/204045013-76e43980-295c-4099-8bdf-27b8f2ae017f.png" />
-. Normalmente, estes algoritmos assumem que os grafos estão sem direção e conectados com a garantia de ciclos e arestas múltiplas. Quando se lidar especificamente com grafos de rede, os grafos estão sem ciclos ou múltiplas arestas para manter relacionamentos simples (onde as arestas representam as ligações entre duas pessoas ou vértices). Neste caso, utilizando o algoritmo de Brandes vai dividir as pontuações finais da centralidade por 2 e contabilizar cada caminho mais curto duas vezes.</p>
-<p>Exemplo de de diferentes centralidades de Intermediação, sendo os vertices de cor mais quente(vermelho) os vertices que possuiem maior grau e vertices de cor mais fria os que possuem menor grau.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204043618-21d4d602-ebbb-45b2-abe2-75e6b86c4441.png" /></p>
-<h2 id="metodologia">Metodologia</h2>
-<p>Inicialmente a ideia era extrair dados das redes IEEE registrados na base de dados do software SINAPgrid, mas o software é pago, então criamos um grafo aleatorio em um arquivo csv para a analise da rede, com calculo das diferentes centralidades.</p>
-<p>A blibioteca Networkx possibilita o cálculo das centralidades e ainda a representação das redes por meio de grafos. Dessa forma, a linguagem de programação Python é uma alternativa barata e simples para aplicar em análise de fragilidade do sistema de transmissão de qualquer dimensão.</p>
-<p>Quando analisa-se a centralidade de grau e intermediação é importante resaltar que quando a maior centralidade de grau, maior é a quantidade de arestas que se conectam ao nó.E que é a centralidade de intermediação é influenciada pela quantidade de nós que se conectam ao nó, ou seja, quanto maior o número de arestas em um nó, maior probabilidade daquele nó atuar como ponte entre outro dois nós, situação que define a centralidade de intermediação.</p>
-<ul>
-<li>referencias por enquanto 
-(https://wikiciencias.casadasciencias.org/wiki/index.php/Grafo)
-https://bmcnews.com.br/2021/07/24/crise-hidrica-x-apagao-no-brasil-relembre-os-maiores-blecautes-no-pais/
-https://pt.wikipedia.org/wiki/Centralidade</li>
-</ul></div>
-            </div>
-        </div>
+<body class="wy-body-for-nav" role="document">
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = ".",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Grafos e Redes de Trasmissão
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
 
-    </body>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Problema</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="grafos/">grafos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Redes/">Redes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Centralidades/">Centralidades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="desenvolvimento/">Desenvolvimento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="execucao/">Execução</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Conclusao/">Conclusão</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Grafos e Redes de Trasmissão</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Problema</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="o-problema">O Problema</h1>
+<p>O estudo de redes é de grande interesse na área científica, dada a capacidade de um poder representar por meio de modelagem diversos problemas de natureza real. Em grafos como modelos para redes, as medidas de centralidade buscam medir a variação da importância dos vértices, em função de alguns invariantes do grafo. Com o estudo do cálculo de centralidade onde o resultado apresenta os vértices frágeis ou com maiores conexões, vértices que se forem desligados ou danificados ocorrem desligamento completo da rede, mostrando ser um método importante na analise do sistema de transmissão pois permite melhorar o planejamento e expansão do sistema. </p>
+<p>Como o objetivo do trabalho é apresentar problemas reais onde a aplicação de grafos seja possível, ficou decidido que devido a complicações causadas por leis da física relacionadas à valoração das conexões (lei de Kirchhoff), grafos não ponderados serão utilizados para a representação do problema.</p>
+<p>Lembrando que, devido ao tema do trabalho, não se aprofundou nos testes de falhas da rede e sim na representação da mesma com um grafo e sua análise de centralidade.</p>
+<p>A centralidade de intermediação foi escolhida como a melhor maneira para se determinar pontos críticos na rede. A avaliação da intermediação determina a possibilidade que um transformador tem para intermediar as 
+comunicações.</p>
+<p>Sendo assim, consideramos como uma importante representação da vulnerabilidade da rede como um todo.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="grafos/" class="btn btn-neutral float-right" title="grafos">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="grafos/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
 </html>
 
 <!--
 MkDocs version : 1.4.2
-Build Date UTC : 2022-11-25 22:26:00.492451+00:00
+Build Date UTC : 2022-11-26 01:50:09.033486+00:00
 -->

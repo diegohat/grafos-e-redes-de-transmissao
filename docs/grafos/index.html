@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>grafos - Grafos e Redes de Trasmissão</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "grafos";
+        var mkdocs_page_input_path = "grafos.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Grafos e Redes de Trasmissão
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Problema</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">grafos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#conceitos-de-grafos">Conceitos de grafos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#grafos-e-a-ciencia-de-computadores">Grafos e a Ciência de Computadores</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Redes/">Redes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Centralidades/">Centralidades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../desenvolvimento/">Desenvolvimento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../execucao/">Execução</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Conclusao/">Conclusão</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Grafos e Redes de Trasmissão</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>grafos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="grafos">Grafos</h1>
+<p>Um grafo é uma representação abstrata de um conjunto de objetos e das relações existentes entre eles.
+ É definido por um conjunto de nós ou vértices e pelas ligações ou arestas, que ligam pares de nós. Uma grande variedade de estruturas do mundo real podem ser representadas abstratamente através de grafos. </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204011472-abc9d182-bd8f-4513-93a0-73a8b24b9302.png" /></p>
+<h2 id="conceitos-de-grafos">Conceitos de grafos</h2>
+<p>Um grafo é descrito por um par (V,E), onde V é o conjunto de vértices e E o conjunto das arestas que ligam pares de vértices. Um grafo pode ser dirigido ou direcionado, se as arestas tiverem uma direção, ou não dirigido, se as arestas não tiverem direção. A figura seguinte ilustra um grafo dirigido. </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204011724-35d17008-0239-4c94-9fb0-b693b47b574b.png" /></p>
+<p>Se as arestas tiverem associado um peso ou custo, o grafo passa a chamar-se de grafo pesado. A figura seguinte ilustra um grafo pesado não dirigido. </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204011774-377a1639-42a8-4159-a1ca-e05e0c0d3579.png" /></p>
+<p>Os nós podem ser de diferente tipos, representados por cores ou etiquetas. Nesse caso, o grafo diz-se colorido. A figura seguinte ilustra um grafo colorido não dirigido. </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204011944-e17f9f97-42c6-4777-b68e-6ecfc275bbff.png" /></p>
+<p>Quando apenas é admitida no máximo uma aresta entre dois nós, diz-se que o grafo é simples.</p>
+<h2 id="grafos-e-a-ciencia-de-computadores">Grafos e a Ciência de Computadores</h2>
+<p>Com a enorme utilidade dos grafos, existe toda uma área de Ciência de Computadores dedicada ao seu estudo e são inúmeros e muito importantes os algoritmos que manipulam grafos. Um exemplo é o Algoritmo de Dijkstra, que encontra o caminho mais curto entre um nó e todos os outros nós, num grafo pesado. Existem muitos outros algoritmos para outras tarefas tais como maximizar o fluxo entre nós ou encontrar a árvore mínima de suporte. </p>
+<p>Do ponto de vista da Programação, um grafo é uma estrutura de dados e existem duas maneiras base de o implementar na prática:</p>
+<ul>
+<li><b>Matriz de Adjacências:</b> uma matriz de V por V células, onde a célula na linha i e coluna j nos dá informação sobre a ligação entre os nós i e j. Por exemplo, se o grafo não for pesado, a célula podia conter o valor verdadeiro (ou um) quando existisse uma ligação entre i e j e o valor falso (ou zero) quando tal não acontecesse. Se o grafo for pesado, cada célula pode conter um número representando o peso da aresta. A figura seguinte ilustra um grafo não dirigido e a sua correspondente matriz de adjacências. </li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204012590-29255987-c010-438f-9995-96b122603d70.png" /></p>
+<ul>
+<li><b>Lista de Adjacências:</b> um vetor de listas onde a posição i do vetor contém uma lista dos nós aos quais o nó i se encontra ligado. Se o grafo for pesado, cada elemento da lista contém também o peso da ligação. A figura seguinte ilustra um grafo não dirigido e a sua correspondente lista de adjacências.</li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/54191675/204012842-41f77227-b335-4c33-b5c3-53ceddc77a9e.png" /></p>
+<p>A matriz permite verificar em tempo constante se uma dada ligação existe ou não. Por oposição, no caso da lista, tal não acontece e é necessário percorrer a lista para saber se um dado nó está ou não ligado. Em contrapartida, se for necessário percorrer todos os nós ligados a um dado nó, a lista é mais eficiente, pois permite percorrer apenas os nós ligados, e não andar a percorrer toda uma linha da matriz, verificando se a ligação existe ou não. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Problema"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Redes/" class="btn btn-neutral float-right" title="Redes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Redes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
