@@ -1,1 +1,0 @@
-[link do Git](https://github.com/diegohat/grafos-e-redes-de-transmissao/blob/main/transmissao.ipynb)
